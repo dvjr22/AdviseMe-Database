@@ -1,45 +1,76 @@
-prefix,co_num,major
-engl,101,"cs, ce"
-math,141,"cs, ce"
-csce,145,"cs, ce"
-csce,190,"cs, ce"
-engl,102,"cs, ce"
-math,142,"cs, ce"
-Chem,111,"cs, ce"
-chem,111L,"cs, ce"
-phys,211,"cs, ce"
-phys,211L,"cs, ce"
-csce,146,"cs, ce"
-csce,215,"cs, ce"
-csce,211,"cs, ce"
-csce,240,"cs, ce"
-math,374,"cs, ce"
-chem,112,"cs, ce"
-chem,112L,"cs, ce"
-phys,212,"cs, ce"
-phys,212L,"cs, ce"
-spch,140,"cs, ce"
-csce,212,"cs, ce"
-math,241,"cs, ce"
-csce,311,"cs, ce"
-csce,330,cs
-csce,350,"cs, ce"
-csce,390,"cs, ce"
-engl,462,"cs, ce"
-engl,463,"cs, ce"
-csce,416,"cs, ce"
-stat,509,"cs, ce"
-csce,490,"cs, ce"
-csce,355,cs
-math,344,"cs, ce"
-math,344L,"cs, ce"
-csce,492,"cs, ce"
-csce,274,ce
-elct,102,ce
-math,242,ce
-elct,221,ce
-elct,222,ce
-csce,313,ce
-csce,317,ce
-elct,371,ce
-csce,611,ce
+prefix,co_num,major,semester
+engl,101,cs,a
+math,141,cs,a
+csce,145,cs,a
+csce,190,cs,a
+engl,102,cs,b
+math,142,cs,b
+Chem,111,cs,b
+chem,111L,cs,b
+phys,211,cs,b
+phys,211L,cs,b
+csce,146,cs,b
+csce,215,cs,b
+csce,211,cs,c
+csce,240,cs,c
+math,374,cs,c
+chem,112,cs,c
+chem,112L,cs,c
+phys,212,cs,c
+phys,212L,cs,c
+spch,140,cs,c
+csce,212,cs,d
+math,241,cs,d
+csce,311,cs,e
+csce,330,cs,e
+csce,350,cs,e
+csce,390,cs,e
+engl,462,cs,e
+engl,463,cs,e
+csce,416,cs,f
+stat,509,cs,f
+csce,490,cs,g
+csce,355,cs,g
+math,344,cs,g
+math,344L,cs,g
+csce,492,cs,h
+engl,101,ce,a
+math,141,ce,a
+csce,145,ce,a
+csce,190,ce,a
+engl,102,ce,b
+math,142,ce,b
+Chem,111,ce,a
+chem,111L,ce,a
+phys,211,ce,c
+phys,211L,ce,c
+csce,146,ce,b
+csce,215,ce,b
+csce,211,ce,c
+csce,240,ce,d
+math,374,ce,e
+phys,212,ce,d
+phys,212L,ce,d
+spch,140,ce,e
+csce,212,ce,d
+math,241,ce,c
+csce,311,ce,e
+csce,350,ce,f
+csce,390,ce,f
+engl,462,ce,f
+engl,463,ce,f
+csce,416,ce,g
+stat,509,ce,e
+csce,490,ce,g
+math,344,ce,h
+math,344L,ce,h
+csce,492,ce,h
+csce,274,ce,c
+elct,102,ce,b
+math,242,ce,d
+elct,221,ce,d
+elct,222,ce,e
+csce,313,ce,f
+csce,317,ce,f
+elct,371,ce,f
+csce,611,ce,g

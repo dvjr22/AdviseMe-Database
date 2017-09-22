@@ -48,7 +48,7 @@ def createTables(cursor):
 		"  first varchar(30),"
 		"  last varchar(30),"
 		"  dob date,"
-		"  status char(1),"
+		"  status char(3),"
 		"  hours smallint,"
 		"  primary key (_id),"
 		"  unique (sid)"
@@ -58,11 +58,12 @@ def createTables(cursor):
 	tables['classes'] = (
 		"CREATE TABLE `classes` ("
 		"  _id integer NOT NULL auto_increment,"
-	    	"  sid varchar(9),"
 		"  prefix varchar(4),"
 		"  co_num varchar(4),"
+		"  title varchar(50),"
+		"  hours tinyint,"
 		"  primary key (_id),"
-		"  unique (sid, prefix, co_num)"
+		"  unique (prefix, co_num)"
 		");"
 	)
 
@@ -101,12 +102,12 @@ def createTables(cursor):
 	tables['curriculum'] = (
 		"CREATE TABLE `curriculum` ("
 		"  _id integer NOT NULL auto_increment,"
-	    	"  major char(3),"
 		"  prefix varchar(4),"
 		"  co_num varchar(4),"
-		"  semester tinyint,"
+	    	"  major char(3),"
+		"  semester char(1),"
 		"  primary key (_id),"
-		"  unique (major, prefix, co_num)"
+		"  unique (prefix, co_num, major)"
 		");"
 	)
 	
