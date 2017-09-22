@@ -56,7 +56,7 @@ with open(curriculumFile) as file:
 
 
 
-#Field names: college, major
+# Field names: college, major
 with open(collegeFile) as file:
 
 	read = csv.DictReader(file)
@@ -64,11 +64,33 @@ with open(collegeFile) as file:
 		data = (row['college'], row['major'])
 		DataEntry.insert(conn, collegeQ, data)
 
-# Add
+
+# Add 
 for i in range(0, numStudents):
 
 	data = (Student.sid(), Student.firstName(), Student.lastName(), Student.birthday(), 'UND')
 	DataEntry.insert(conn, studentsQ, data)
+
+getSid = ("SELECT sid from students;")
+
+x = 0
+
+addMajor = ("INSERT into degree"
+	"(sid, major)"
+	"VALUES (%s, %s)")
+
+sid = DataEntry.querySid(conn, getSid)
+
+for i in sid:
+	
+	data = (sid[x], Student.major())
+	DataEntry.insert(conn, addMajor, data)
+	x += 1
+	
+
+
+
+
 
 
 

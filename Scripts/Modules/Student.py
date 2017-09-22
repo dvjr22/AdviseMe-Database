@@ -67,6 +67,16 @@ def birthday():
 	return str(year) +"-"+ str(month) + "-" + str(day)
 
 
+""" ----------------------------------------------------------------------------------------------------------
+Generate a major
+"""
+def major():
+	
+	major = ["cs", "ce"]
+	
+	return major[r.randint(0, (len(major) -1))]
+
+
 
 
 
