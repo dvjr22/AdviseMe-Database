@@ -49,6 +49,7 @@ def createTables(cursor):
 		"  last varchar(30),"
 		"  dob date,"
 		"  status char(1),"
+		"  hours smallint,"
 		"  primary key (_id),"
 		"  unique (sid)"
 		");"
