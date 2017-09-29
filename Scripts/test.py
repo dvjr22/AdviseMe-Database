@@ -21,8 +21,8 @@ classesQ = ("INSERT INTO classes"
 
 curriculumFile = '/home/valdeslab/SeniorYear/Capstone/Database/Data/curriculum.csv'
 curriculumQ = ("INSERT INTO curriculum"
-	"(prefix, co_num, major, semester)"
-	"VALUES (%s, %s, %s, %s);")
+	"(prefix, co_num, major, semester, min_grade)"
+	"VALUES (%s, %s, %s, %s, %s);")
 
 collegeFile = '/home/valdeslab/SeniorYear/Capstone/Database/Data/college.csv'
 collegeQ = ("INSERT INTO college"
@@ -36,6 +36,10 @@ studentsQ = ("INSERT INTO students"
 	"(sid, first, last, dob, status)"
 	"VALUES (%s, %s, %s, %s, %s)")
 
+
+addMajor = ("INSERT INTO degree"
+	"(sid, major)"
+	"VALUES (%s, %s)")
 
 # Field names: prefix, co_num, title, hours
 with open(classFile) as file:
@@ -51,7 +55,7 @@ with open(curriculumFile) as file:
 
 	read = csv.DictReader(file)
 	for row in read:
-		data = (row['prefix'], row['co_num'], row['major'], row['semester'])
+		data = (row['prefix'], row['co_num'], row['major'], row['semester'], row['mingrade'])
 		DataEntry.insert(conn, curriculumQ, data)
 
 
@@ -67,26 +71,23 @@ with open(collegeFile) as file:
 
 # Add 
 for i in range(0, numStudents):
+	
+	sid = Student.sid()
 
-	data = (Student.sid(), Student.firstName(), Student.lastName(), Student.birthday(), 'UND')
+	data = (sid, Student.firstName(), Student.lastName(), Student.birthday(), 'UND')
 	DataEntry.insert(conn, studentsQ, data)
 
-getSid = ("SELECT sid from students;")
-
-x = 0
-
-addMajor = ("INSERT into degree"
-	"(sid, major)"
-	"VALUES (%s, %s)")
-
-sid = DataEntry.querySid(conn, getSid)
-
-for i in sid:
-	
-	data = (sid[x], Student.major())
+	data = (sid, Student.major())
 	DataEntry.insert(conn, addMajor, data)
-	x += 1
+
+
+# get the list of sid - something seems to be broken about this
+# getSid = ("SELECT sid from students;")
+# sid = DataEntry.querySid(conn, getSid)
+
+
 	
+
 
 
 

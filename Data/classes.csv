@@ -10,7 +10,7 @@ chem,111L,General Chemistry Lab,1
 phys,211,Essentials of Phys 1,3
 phys,211L,Essentials of Phys Lab,1
 csce,146,Algorithmic Design 2,4
-csce,215,UNIX?Linus Fundamentals,1
+csce,215,UNIX/Linus Fundamentals,1
 csce,211,Digital Logic Design,3
 csce,240,Introduction to Software Engineering,3
 math,374,Discrete Structures,3
@@ -43,3 +43,16 @@ csce,313,Embedded Systems,3
 csce,317,Computer Systems Engineering,3
 elct,371,Electronics,3
 csce,611,Advanced Digital Design,3
+ccrq,1,Carolina Core,3
+ccrq,2,Carolina Core,3
+ccrq,3,Carolina Core,3
+lsel,1,Laboratory Science Elective,3
+aael,1,Application Area Elective,3
+aael,2,Application Area Elective,3
+aael,3,Application Area Elective,3
+lael,1,Liberal Arts Elective,3
+lael,2,Liberal Arts Elective,3
+lael,3,Liberal Arts Elective,3
+csel,1,CSCE Major Elective,3
+csel,2,CSCE Major Elective,4
+csel,3,CSCE Major Elective,5

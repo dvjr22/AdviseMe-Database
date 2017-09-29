@@ -106,6 +106,7 @@ def createTables(cursor):
 		"  co_num varchar(4),"
 	    	"  major char(3),"
 		"  semester char(1),"
+		"  min_grade char(1) default NULL,"
 		"  primary key (_id),"
 		"  unique (prefix, co_num, major)"
 		");"
